@@ -79,9 +79,7 @@ $(document).ready(function() {
       pList = $(this).parents('.ulli');
       $.post("priorTask.php", {taskName: $(this).parents('.ulli').find('.taskValue').text(),
                             listName: $(this).parents('.list').find('.sPanel').text(), upDown: 1, 
-                            nextPrev: pList.next().find('.taskValue').text()}, function(str){ //убрать функцию
-    alert(str);
-  },"text");
+                            nextPrev: pList.next().find('.taskValue').text()});
       pList.insertAfter(pList.next());
   });
 
@@ -89,9 +87,7 @@ $(document).ready(function() {
       pList = $(this).parents('.ulli');
       $.post("priorTask.php", {taskName: $(this).parents('.ulli').find('.taskValue').text(),
                             listName: $(this).parents('.list').find('.sPanel').text(), upDown: 0, 
-                            nextPrev: pList.prev().find('.taskValue').text()}, function(str){ //убрать функцию
-    alert(str);
-  },"text");
+                            nextPrev: pList.prev().find('.taskValue').text()});
       pList.insertBefore(pList.prev());
   });
 
